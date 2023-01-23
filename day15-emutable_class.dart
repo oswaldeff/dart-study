@@ -4,6 +4,13 @@ void main() {
     'melon'
   );
 
+  Music newPlayer = const Music(
+    ['pop', 'balad', 'RnB'],
+    'melon'
+  );
+
+  print(player == newPlayer); // const로 선언된 constructor는 같은 객체로 취급된다.
+
   player.printGenre();
 
   player.printCompany();
