@@ -10,6 +10,10 @@ void main() {
 
   kr_music.kpopTrend();
 
+  CultureAwards kr_music_awards = CultureAwards("BTS", "k-pop");
+
+  kr_music_awards.bestSingerAwardName();
+
 }
 
 class Music{
@@ -41,5 +45,19 @@ class Culture extends Music {
 
   void kpopTrend() {
     print("${this.singer} is(are) KR culture leader!");
+  }
+}
+
+class CultureAwards extends Music {
+  CultureAwards(
+    String bestSingerAward,
+    String genre,
+  ): super(
+    singer: bestSingerAward, // 상속하는 parameter가 key이다.
+    genre: genre,
+  );
+
+  void bestSingerAwardName() {
+    print("${this.singer} is(are) Best Singer Award of this year!");
   }
 }
