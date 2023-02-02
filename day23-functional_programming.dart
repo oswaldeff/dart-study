@@ -26,4 +26,12 @@ void main() {
   print(newBuildings1 == buildings); // false
   print(newBuildings2 == buildings); // false
   print(newBuildings1 == newBuildings2); // false
+
+  // Practice
+  // [1.jpg, 3.jpg, 5.jpg, 7.jpg, 9.jpg] 를 만들어보자.
+  String nums = '13579';
+
+  final parser = nums.split('').map((i) => '$i.jpg').toList(); // string타입의 variable은 기본적으로 split을 지원한다.
+
+  print(parser); // [1.jpg, 3.jpg, 5.jpg, 7.jpg, 9.jpg]
 }
